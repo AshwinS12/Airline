@@ -2,13 +2,15 @@ package com.spring.web.mvc.AirlineProjectJava20.bean;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity 
-@Table(name= " ")
+@Table(name= "Loginbean")
 public class Loginbean {
-@Id 
+@Id
+@GeneratedValue
 @Column(name = "name")
 private String name;
 @Column(name = "password")
