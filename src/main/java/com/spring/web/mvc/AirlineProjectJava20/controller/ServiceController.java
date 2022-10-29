@@ -18,7 +18,7 @@ public ModelAndView readLogin(@ModelAttribute("UserObj")Loginbean lb) {
 	mav.setViewName("home");
 	mav.addObject("insertresponsevalue",result);
 	
-	
+	//2
 	return mav;
 	
 }

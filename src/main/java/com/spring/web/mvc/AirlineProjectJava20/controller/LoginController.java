@@ -15,5 +15,5 @@ public String OpenRegisterationPage() {
 public String OpenLoginPage() {
 	String views = "NewFile1";
 	return views;
-}
+}//1
 }
