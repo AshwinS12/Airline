@@ -42,6 +42,5 @@ public String getIdproof() {
 public void setIdproof(String idproof) {
 	this.idproof = idproof;
 }
-
-
+//.
 }
