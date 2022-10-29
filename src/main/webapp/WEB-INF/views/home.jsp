@@ -10,5 +10,7 @@
     <body>
         <h1>Hello World!</h1>
         <p>This is the homepage!</p>
+        <a href = "Logincustomer">Login</a>
+        <a href = "registeringcustomer">Booking Ticket</a>
     </body>
 </html>
