@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity 
-@Table(name= " ")
+@Table(name= "loginbean")
 public class Loginbean {
 @Id 
 @Column(name = "name")
@@ -42,6 +42,5 @@ public String getIdproof() {
 public void setIdproof(String idproof) {
 	this.idproof = idproof;
 }
-
-
+//.
 }

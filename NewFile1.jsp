@@ -56,9 +56,11 @@ text-align:center;
 </head>
 <body class="bg-info"
 	style="background-image:url('https://www.webintravel.com/wp-content/uploads/2020/05/den-belitsky-GettyImages-854673918-scaled.jpg');background-position: cover;background-repeat: no-repeat">
-
+<a href = "registeringcustomer">Registration</a>
 <div class="loginbox">
 <h1>User Login</h1>
+ 
+<form:form modelAttribute="UserObj" action="UserLoginRequest" method="post">
                 <label for="name">Name:</label>
 				<input type="Name" onkeypress="clearForm()" id="Name"
 					name="Name" placeholder="Enter Name" required><br>
@@ -72,6 +74,8 @@ text-align:center;
                 <br>
                 <p>New User?</p>
                 <input type="button" value="registration">
+                
+                </form:form>
 				</div>
 </body>
 </html>
