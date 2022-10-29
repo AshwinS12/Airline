@@ -16,12 +16,16 @@ public class ServiceController {
 	DAO dao;
 @RequestMapping(value = "UserLoginRequest",method = RequestMethod.POST)
 public ModelAndView readLogin(@ModelAttribute("UserObj")Loginbean lb) {
+	
 	String result = null;
 	ModelAndView mav = new ModelAndView();
-	result = dao.SignUp(lb);
-	mav.setViewName("home");
-	mav.addObject("insertresponsevalue",result);
+	String name = lb.getName();
+	String password = lb.getPassword();
+	boolean flag = dao.logindetails(name,password);
+	if(flag) {
+		mav.setViewName("home");
+		mav.addObject("insertresponsevalue",result);
+	}
 	return mav;
-	
 }
 }

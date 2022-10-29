@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class LoginController {
 @RequestMapping(value = "registeringcustomer")
 public String OpenRegisterationPage() {
-	String views = "NewFile";
+	String views = "Register";
 	return views;
 }
 
 @RequestMapping(value = "Logincustomer")
 public String OpenLoginPage() {
-	String views = "NewFile1";
+	String views = "Login";
 	return views;
 }//1
 }
