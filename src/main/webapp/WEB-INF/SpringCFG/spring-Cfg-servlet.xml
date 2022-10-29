@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd  http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
+	<context:component-scan base-package="com.vtalent.springmvc"
+		use-default-filters="false">
+		<context:include-filter expression="org.springframework.stereotype.Controller"
+			type="annotation" />
+	</context:component-scan>
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/ViewPages/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	<!--  Hibernate configuration -->
+	 <bean id="dataSource"  
+      class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
+      <property name="driverClassName" value="com.mysql.jdbc.Driver" />  
+      <property name="url" value="jdbc:mysql://localhost:3306/airline" />  
+      <property name="username" value="root" />  
+      <property name="password" value="root" />  
+     </bean>  
+	
+	<bean id="sessionFactory"  
+      class="org.springframework.orm.hibernate5.LocalSessionFactoryBean"> <!-- annotation.AnnotationSessionFactoryBean"> -->  
+      <property name="dataSource" ref="dataSource" />  
+      <property name="annotatedClasses">    
+                <list>    
+                    <value>com.spring.web.mvc.AirlineProjectJava20.bean.Loginbean</value>    
+                </list>    
+            </property>   
+      <property name="hibernateProperties">  
+       <props>  
+        <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>  
+        
+       </props>  
+      </property>  
+     </bean>  
+     
+     <bean id="txManager"  
+      class="org.springframework.orm.hibernate5.HibernateTransactionManager">  
+      <property name="sessionFactory" ref="sessionFactory" />  
+     </bean>  
+      
+     <bean id="persistenceExceptionTranslationPostProcessor"  
+      class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />  
+      
+	<bean id="daoRef" class="com.spring.web.mvc.AirlineProjectJava20.DAO.DaoImplementation"/>
+	<bean id="serviceRef" class="com.spring.web.mvc.AirlineProjectJava20.Service.ServiceImplementation"/>
+	
+	</beans>

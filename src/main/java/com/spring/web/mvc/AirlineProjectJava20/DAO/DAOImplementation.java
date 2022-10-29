@@ -1,30 +1,48 @@
 package com.spring.web.mvc.AirlineProjectJava20.DAO;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
+
 import org.hibernate.SessionFactory;
-import org.hibernate.query.Query;
+import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.spring.web.mvc.AirlineProjectJava20.bean.Loginbean;
+import com.hrm.springmvc.entity.bean.Loginbean;
 
+@SuppressWarnings("deprecation")
 public class DAOImplementation implements DAO {
 	@Autowired
 	SessionFactory sessionfactory;
 
 	@Override
 	
-	public boolean logindetails(String name, String password) {
-		boolean b1=false;
-		Session session =sessionfactory.openSession();
-		Query query=session.createQuery("from Loginbean where emp.name='"+name+"' and emp.password="+password);
-		Loginbean pass1 = (Loginbean) query.uniqueResult();
-		if(pass1 == null) {
-			b1 = false;
-		}else {
-			b1 = true;
+	public String SignUp(Loginbean loginbean) {
+		String result = "";
+		Session session = sessionfactory.openSession();
+		Object obj= session.save(loginbean);
+		Transaction trans= session.beginTransaction();
+		trans.commit();
+		if(obj !=null) {
+			result =(String)obj;
 		}
-		return b1;
+		return result;
 	}
+	
+	public boolean logindetails(String name, String password) {
+		boolean bean=false;
+		Session session =sessionfactory.openSession();
+	    @SuppressWarnings("rawtypes")
+		Query query=session.createQuery("from airline Loginbean where Loginbean.name='"+name+"' and Loginbean.password="+password);
+		@SuppressWarnings("deprecation")
+		Loginbean login = (Loginbean) query.uniqueResult();
+		if(login == null) {
+			bean = false;
+		}else {
+			bean = true;
+		}
+		return bean;
+	}
+
 
 	
 
