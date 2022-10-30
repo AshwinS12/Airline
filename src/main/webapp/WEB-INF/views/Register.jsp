@@ -60,13 +60,13 @@ li a[class="logo1"]:hover {
  .loginbox{
 width:500px;
 height:600px;
-	background:transparent;
-	color:black;
-	top:20%;
-	left:5%;
-	position:absolute;
-	box-sizing:border-box;
-	padding:0px 30px;
+background:transparent;
+color:black;
+top:20%;
+left:5%;
+position:absolute;
+box-sizing:border-box;
+padding:0px 30px;
 }
 .loginbox p{
 margin-left:220px;
@@ -87,7 +87,7 @@ background:transparent;
 outline:none;
 height:30px;
 color:black;
-font-size:16px;	
+font-size:16px;
 width:100%;
 }
 .loginbox input[value="Login"]{
@@ -116,7 +116,7 @@ background:transparent;
 outline:none;
 height:35px;
 color:black;
-font-size:16px;	
+font-size:16px;
 width:100%;
 
 }
@@ -132,33 +132,34 @@ marign-buttom:10px;
 </style>
 </head>
 <body class="bg-info"
-	style="background-image:url('https://www.webintravel.com/wp-content/uploads/2020/05/den-belitsky-GettyImages-854673918-scaled.jpg');background-position: cover;background-repeat: no-repeat">
+style="background-image:url('https://www.webintravel.com/wp-content/uploads/2020/05/den-belitsky-GettyImages-854673918-scaled.jpg');background-position: cover;background-repeat: no-repeat">
 <ul>
 <li class="logo"><a class="logo1" href="homepageopening">hi</a></li>
 <li class="main">VTALENT FLIGHT BOOKING</li>
  <li><a href="aboutuspageopening">About</a></li>
   <li><a  href="homepageopening">Home</a></li>
   <li><a href="loginpageopening">Login</a></li>
-  
+ 
 </ul><br>
 <div class="loginbox">
 <h1>New User Registration</h1>
+<form modelAttribute="Userregister" action="UserRegisterRequest" method="get">
                 <label for="Name">Name:</label>
-				<input type="Name" onkeypress="clearForm()" id="Name"
-					name="Name" placeholder="Enter Name" required><br>
-				 <label for="Password">Password:</label>
-				<input type="Password" onkeypress="clearForm()" id="Password"
-					name="Password" placeholder="Enter Password" required>
-					<br>
-					 <label for="name">Re-Enter Password:</label>
-				<input type="Re-Enter Password" onkeypress="clearForm()" id="Re-Enter Password"
-					name="Re-Enter Password" placeholder="Re-Enter Password" required>
-					<br>
-				 <label for="Mobile Number">Mobile Number:</label>
-				<input type="Mobile Number" onkeypress="clearForm()" id="Mobile Number"
-					name="Mobile Number" placeholder="Enter Mobile Number" required>
-					<br>
-				
+<input type="Name"  id="Name"
+name="Name" placeholder="Enter Name" required><br>
+<label for="Password">Password:</label>
+<input type="password"  id="Password"
+name="Password" placeholder="Enter Password" required>
+<br>
+<label for="name">Re-Enter Password:</label>
+<input type="password"  id="Re-Enter Password"
+name="Re-Enter Password" placeholder="Re-Enter Password" required>
+<br>
+<label for="Mobile Number">Mobile Number:</label>
+<input type="Mobile Number"  id="Mobile Number"
+name="Mobile Number" placeholder="Enter Mobile Number" required>
+<br>
+
 
 <label for="Select Class">Select ID:</label>
 <select name="Select ID" id="Select ID">
@@ -172,9 +173,12 @@ marign-buttom:10px;
                 <br>
                 <p>Existing User?</p>
                <button
-					style="height: 30px; width: 75px;font-style: italic;margin-left:220px">
-					<a href="loginpageopening">Login</a>
-				</button>
-				</div>
+style="height: 30px; width: 75px;font-style: italic;margin-left:220px">
+<a href="loginpageopening">Login</a>
+</button>
+
+</form>
+</div>
 </body>
 </html>
+
