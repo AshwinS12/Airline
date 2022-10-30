@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class RequestController {
 	@RequestMapping(value = "requestcustomer")
 	public String OpenRequestpage() {
-		String views = "NewFile";
+		String views = "NewFile1";
 		return views;
 	}
 
