@@ -2,7 +2,7 @@ package com.spring.web.mvc.AirlineProjectJava20.controller;
 
 import java.util.*;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.spring.web.mvc.AirlineProjectJava20.DAO.DAO;
 import com.spring.web.mvc.AirlineProjectJava20.bean.Loginbean;
+import com.spring.web.mvc.AirlineProjectJava20.bean.Ticketbookingbean;
 
 @Controller
 public class ServiceController {
@@ -33,11 +34,11 @@ public ModelAndView readLogin(@ModelAttribute("UserObj")Loginbean lb) {
 }
 
 @RequestMapping(value = "UserRegisterRequest",method = RequestMethod.GET)
-public ModelAndView readRegister(@ModelAttribute("Userregister")Loginbean lb) {
+public ModelAndView readRegister(@ModelAttribute("Userregister")Ticketbookingbean tb) {
 	
 	String result = "";
 	ModelAndView mav = new ModelAndView();
-	result = dao.SignUp(lb);
+	result = dao.SignUp(tb);
 	List<Loginbean> al = new ArrayList<Loginbean>();
 	if(result!="") {
 		mav.setViewName("success");

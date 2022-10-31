@@ -37,7 +37,7 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="annotatedClasses">
 			<list>
-				<value>com.spring.web.mvc.AirlineProjectJava20.bean.Loginbean
+				<value>com.spring.web.mvc.AirlineProjectJava20.bean.Ticketbookingbean
 				</value>
 			</list>
 		</property>

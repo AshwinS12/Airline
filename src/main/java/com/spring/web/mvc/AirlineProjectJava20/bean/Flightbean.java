@@ -7,24 +7,31 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity 
-@Table(name = "airline")
+@Table(name = "Flightbean")
 public class Flightbean {
-	 @Column(name="from")
-		private String from;
-	@Column(name="to")
-		private String to;
+	 @Column(name="fromstation")
+		private String fromstation;
+	@Column(name="tostation")
+		private String tostation;
 	@Column(name="date")
 		private String date;
 	@Column(name="ticketnum")
 	private int ticketnum;
 	@Column(name="time")
 	private String time;
-		public String getFrom() {
-			return from;
-		}
-		public String setFrom(String from) {
-			return from;
-		}
+		
+		public String getFromstation() {
+		return fromstation;
+	}
+	public void setFromstation(String fromstation) {
+		this.fromstation = fromstation;
+	}
+	public String getTostation() {
+		return tostation;
+	}
+	public void setTostation(String tostation) {
+		this.tostation = tostation;
+	}
 		public String getDate() {
 			return date;
 		}

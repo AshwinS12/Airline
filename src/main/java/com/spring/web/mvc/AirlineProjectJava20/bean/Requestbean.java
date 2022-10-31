@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Airline")
+@Table(name="Requestbean")
 public class Requestbean {
 	@Id@Column(name="SNo")
 	private int SNo;

@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name ="EmployeeTable")
+@Table(name ="Cancelledtickets")
 
 public class CancelledtickedBean {
 	
@@ -20,12 +20,12 @@ public class CancelledtickedBean {
 	private String Location;
 	@Column(name = "Reason")
 	private String Reason;
-	@Column(name = "IdProop")
-	private String IdProop;
+	@Column(name = "IdProof")
+	private String IdProof;
 	@Column(name = "Gender")
 	private String Gender;
-	@Column(name = "ContactNuber")
-	private Long ContactNuber;
+	@Column(name = "ContactNumber")
+	private Long ContactNumber;
 	@Column(name = "Time")
 	private String Time;
 	public int getTicketNumber() {
@@ -52,11 +52,11 @@ public class CancelledtickedBean {
 	public void setReason(String reason) {
 		Reason = reason;
 	}
-	public String getIdProop() {
-		return IdProop;
+	public String getIdProof() {
+		return IdProof;
 	}
-	public void setIdProop(String idProop) {
-		IdProop = idProop;
+	public void setIdProof(String idProof) {
+		IdProof = idProof;
 	}
 	public String getGender() {
 		return Gender;
@@ -64,11 +64,11 @@ public class CancelledtickedBean {
 	public void setGender(String gender) {
 		Gender = gender;
 	}
-	public Long getContactNuber() {
-		return ContactNuber;
+	public Long getContactNumber() {
+		return ContactNumber;
 	}
-	public void setContactNuber(Long contactNuber) {
-		ContactNuber = contactNuber;
+	public void setContactNumber(Long contactNumber) {
+		ContactNumber = contactNumber;
 	}
 	public String getTime() {
 		return Time;
