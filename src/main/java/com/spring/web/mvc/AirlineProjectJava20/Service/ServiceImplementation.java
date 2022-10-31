@@ -20,4 +20,13 @@ public class ServiceImplementation implements Service {
 		return dao.logindetails(name, password);
 	}
 
+	public String Searchticket(Loginbean LB) {
+		return dao.Searchticket(LB);
+		
+	}
+	
+	public String Cancelticket(String ticketnumber) {
+		return dao.Cancelticket(ticketnumber);
+		
+	}
 }
