@@ -27,6 +27,7 @@ public ModelAndView readLogin(@ModelAttribute("UserObj")Loginbean lb) {
 	if(flag) {
 		mav.setViewName("success");
 		mav.addObject("insertresponsevalue",flag);
+		
 	}
 	return mav;
 }
