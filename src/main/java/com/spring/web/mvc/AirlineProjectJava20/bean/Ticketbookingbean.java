@@ -1,21 +1,20 @@
 package com.spring.web.mvc.AirlineProjectJava20.bean;
 
 	import javax.persistence.Column;
-
 	import javax.persistence.Entity;
 	import javax.persistence.GeneratedValue;
 	import javax.persistence.Id;
 	import javax.persistence.Table;
 
 	@Entity
-	@Table(name = "Tickets")
+	@Table(name = "Ticketbooking")
 
 	public class Ticketbookingbean {
 		
 	@Id
 	@GeneratedValue
 	@Column (name = "TicketNumber")
-	private int TicketNumber;
+	private int Ticketnumber;
 	
 	@Column (name = "Name")
 	private String Name;
@@ -39,19 +38,19 @@ package com.spring.web.mvc.AirlineProjectJava20.bean;
 	private String Time;
 	
 	@Column (name = "TicketStatus")
-	private String TicketStatus;
+	private boolean TicketStatus;
 	
 	@Column (name = "Gender")
-	private String Gender;
+	private boolean Gender;
 	
 	@Column (name = "Location")
 	private String Location;
 	
 	public int getTicketnumber() {
-		return TicketNumber;
+		return Ticketnumber;
 	}
 	public void setTicketnumber(int ticketnumber) {
-		TicketNumber = ticketnumber;
+		Ticketnumber = ticketnumber;
 	}
 	public String getName() {
 		return Name;
@@ -95,32 +94,24 @@ package com.spring.web.mvc.AirlineProjectJava20.bean;
 	public void setTime(String time) {
 		Time = time;
 	}
-	
+	public boolean isTicketStatus() {
+		return TicketStatus;
+	}
+	public void setTicketStatus(boolean ticketStatus) {
+		TicketStatus = ticketStatus;
+	}
+	public boolean isGender() {
+		return Gender;
+	}
+	public void setGender(boolean gender) {
+		Gender = gender;
+	}
 	public String getLocation() {
 		return Location;
 	}
 	public void setLocation(String location) {
 		Location = location;
 	}
-	public int getTicketNumber() {
-		return TicketNumber;
-	}
-	public void setTicketNumber(int ticketNumber) {
-		TicketNumber = ticketNumber;
-	}
-	public String getTicketStatus() {
-		return TicketStatus;
-	}
-	public void setTicketStatus(String ticketStatus) {
-		TicketStatus = ticketStatus;
-	}
-	public String getGender() {
-		return Gender;
-	}
-	public void setGender(String gender) {
-		Gender = gender;
-	}
-	
 
 }
 
