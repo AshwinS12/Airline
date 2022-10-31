@@ -2,12 +2,14 @@ package com.spring.web.mvc.AirlineProjectJava20.DAO;
 
 import org.hibernate.Session;
 
+
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.spring.web.mvc.AirlineProjectJava20.bean.Loginbean;
+import com.spring.web.mvc.AirlineProjectJava20.bean.Ticketbookingbean;
 
 
 public class DAOImplementation implements DAO {
@@ -30,11 +32,11 @@ public class DAOImplementation implements DAO {
 		
 	}
 //Registration
-	public String SignUp(Loginbean LB) {
+	public String SignUp(Ticketbookingbean tb) {
 		String result="";
 		Session session=sessionfactory.openSession();
 		
-		Object obj=session.save(LB);
+		Object obj=session.save(tb);
 		Transaction trans=session.beginTransaction();
 		trans.commit();
 		if(obj!=null) {
