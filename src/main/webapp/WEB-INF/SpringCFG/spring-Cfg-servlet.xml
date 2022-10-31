@@ -29,7 +29,7 @@
 		<property name="url"
 			value="jdbc:mysql://localhost:3306/airline" />
 		<property name="username" value="root" />
-		<property name="password" value="root" />
+		<property name="password" value="Vihaan@143" />
 	</bean>
 
 	<bean id="sessionFactory"

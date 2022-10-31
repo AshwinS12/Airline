@@ -8,5 +8,8 @@ public interface Service {
 	
 	public boolean Logindetails(String name , String password);
 
+    public String Searchticket(Loginbean LB);
+	
+	public String Cancelticket(String ticketnumber);
 }
 
