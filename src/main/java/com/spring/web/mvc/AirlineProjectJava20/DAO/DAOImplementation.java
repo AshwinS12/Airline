@@ -57,7 +57,7 @@ public class DAOImplementation implements DAO {
 	public String Cancelticket(String ticketnumber) {
 		String result="";
 		Session session=sessionfactory.openSession();
-		Object obj = session.createQuery("Upadte airline TicketBooking set TicketBooking.Status=Cancel where TicketBoking.TicketNumber='"+ticketnumber+"'");
+		Object obj = session.createQuery("Update airline TicketBooking set TicketBooking.Status=Cancel where TicketBooking.TicketNumber='"+ticketnumber+"'");
 		if(obj!=null) {
 			result=(String) obj;
 		}

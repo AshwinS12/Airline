@@ -12,7 +12,6 @@ import com.spring.web.mvc.AirlineProjectJava20.bean.Loginbean;
 
 @Controller
 public class ServiceController {
-	//@Autowired
 	DAO dao;
 @RequestMapping(value = "UserLoginRequest",method = RequestMethod.POST)
 public ModelAndView readLogin(@ModelAttribute("UserObj")Loginbean lb) {
