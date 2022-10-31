@@ -9,5 +9,6 @@ public class HomePageController {
 public String OpenHomepage() {
 	String views = "home";
 	return views;
+	//1
 }
 }
